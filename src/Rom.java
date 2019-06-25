@@ -1,9 +1,11 @@
 public class Rom extends Product {
 
+    //PROPERTIES
     private String tipo;
     private float speed;
     private int capacity;
 
+    //CONSTRUCTORS
     public Rom(float priceUnit, float weight,String tipo, float speed, int capacity) {
         super(priceUnit, weight);
         setTipo(tipo);
@@ -11,6 +13,7 @@ public class Rom extends Product {
         setCapacity(capacity);
     }
 
+    //GETTERS AND SETTERS
     public String getTipo() {
         return tipo;
     }
@@ -35,9 +38,10 @@ public class Rom extends Product {
         this.capacity = capacity;
     }
 
+    //TO STRING
     @Override
     public String toString() {
-        String messager = "TIPO : %s \n CAPACITY : %dGB \n SPEDD : %.2fGhz";
-        return "ROM: "+super.toString().concat(String.format(messager,getTipo(),getCapacity(),getSpeed()));
+        String messager = "TIPO : %s \nCAPACITY : %dGB \nSPEDD : %.2fGhz";
+        return "\nROM : "+super.toString().concat(String.format(messager,getTipo(),getCapacity(),getSpeed()));
     }
 }

@@ -1,12 +1,10 @@
 public class Ram extends Product {
 
     //PROPERTIES
-
     private float speed;
     private int capacity;
 
     //CONSTRUCTORS
-
     public Ram(float priceUnit, float weight, float speed, int capacity) {
         super(priceUnit, weight);
         setSpeed(speed);
@@ -14,7 +12,6 @@ public class Ram extends Product {
     }
 
     //GETTERS AND SETTERS
-
     public float getSpeed() {
         return speed;
     }
@@ -32,15 +29,18 @@ public class Ram extends Product {
     }
 
     //TO STRING
-
     @Override
     public String toString() {
         String messagerFormat = "\nCAPACITY : %dGB\nSPEED : %.2fGhz";
-        return "RAM:" +super.toString().concat(String.format(messagerFormat,getCapacity(),getSpeed()));
+        return "\nRAM :" +super.toString().concat(String.format(messagerFormat,getCapacity(),getSpeed()));
     }
 
 
     //EQUALS
 
 
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
 }
