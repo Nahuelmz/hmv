@@ -1,13 +1,11 @@
 public class Processor extends Product {
 
     //PROPERTIES
-
     private int quantityCore;
     private float speed;
     private String generation;
 
     //CONSTRUCTORS
-
     public Processor(float priceUnit, float weight, int quantityCore, float speed, String generation) {
         super(priceUnit, weight);
         setQuantityCore(quantityCore);
@@ -15,9 +13,7 @@ public class Processor extends Product {
         setGeneration(generation);
     }
 
-
     //GETTERS AND SETTERS
-
     public int getQuantityCore() {
         return quantityCore;
     }
@@ -43,12 +39,10 @@ public class Processor extends Product {
     }
 
     //TO STRING
-
-
     @Override
     public String toString()
     {
         String messagerFormat = "\nQUANTITY CORE : %d\nSPEED : %.2fGhz\nGENERATION : %s";
-                return "PROCESSOR:"+super.toString().concat(String.format(messagerFormat,getQuantityCore(),getSpeed(),getGeneration()));
+                return "\nPROCESSOR :"+super.toString().concat(String.format(messagerFormat,getQuantityCore(),getSpeed(),getGeneration()));
     }
 }

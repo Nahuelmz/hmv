@@ -1,17 +1,12 @@
-public class Product {
+public abstract class Product {
 
+    //PROPERTIES
     private static int idCont = 0;
     private int id;
     private float priceUnit;
     private float weight;
 
-    public int getId() {
-        return id;
-    }
-
-
     //CONSTRUCTORS
-
     public Product(float priceUnit, float weight) {
         id=idCont+1;
         idCont++;
@@ -19,10 +14,12 @@ public class Product {
         setWeight(weight);
     }
 
-
     //GETTERS AND SETTERS
+    public int getId() {
+        return id;
+    }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
@@ -42,10 +39,7 @@ public class Product {
         this.weight = weight;
     }
 
-
     //TO STRING
-
-
     @Override
     public String toString() {
 
@@ -53,9 +47,7 @@ public class Product {
         return String.format(messagerFormat,getId(),getPriceUnit(),getWeight());
     }
 
-
     //EQUALS
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
